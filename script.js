@@ -1,15 +1,14 @@
-const hamburger = document.getElementById("hamburger")
-const expand = document.getElementById("expand")
+const hamburger = document.querySelector(".hamburger")
+const navMenu = document.querySelector(".nav-menu")
 
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active")
+})
 
-function hamburg() {
-    expand.classList.toggle('active')
-
-    if (expand.style.display === "none") {
-        expand.style.display = "flex";
-    } else {
-        expand.style.display = "none";
-    }
-}
-
-
+document.querySelectorAll(".nav-link").forEach(n => n.
+    addEventListener("click", () => {
+        hamburger.classList.remove("active")
+        navMenu.classList.remove("active")
+    })
+    )
